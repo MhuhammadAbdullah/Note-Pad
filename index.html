@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="theme-switcher">
+        <!-- <button class="theme1"></button>
+        <button class="theme2"></button>
+        <button class="theme3"></button>
+        <button class="theme4"></button>
+        <button class="theme5"></button>
+        <button class="theme6"></button> -->
+    </div>
+    <div class="container">
+        <div class="post-box">
+            <div class="user-info">
+                <img src="assets/profile-icon-male.jpg" alt="User profile picture" width="40" height="40">
+                <div class="name">John Doe</div>
+                <!-- <div class="time">Just now</div> -->
+            </div>
+            <textarea placeholder="What's on your mind?"></textarea>
+            <div class="actions">
+                <div class="left">
+                    <button class="image-upload-btn">
+                        <i class="fas fa-image"></i>
+                    </button>
+                    <input accept="image/*" class="image-upload-input" style="display: none;" type="file">
+                    <button>
+                        <i class="fas fa-file"></i>
+                    </button>
+                    <button class="emoji-btn">
+                        <i class="fas fa-smile"></i>
+                    </button>
+                </div>
+                <div class="right">
+                    <button class="share-btn">SHARE POST</button>
+                </div>
+            </div>
+            <div class="emoji-picker">
+                <button>😀</button>
+                <button>😁</button>
+                <button>😂</button>
+                <button>🤣</button>
+                <button>😃</button>
+                <button>😄</button>
+                <button>😅</button>
+                <button>😆</button>
+                <button>😉</button>
+                <button>😊</button>
+            </div>
+        </div>
+        <div class="post-grid"></div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
