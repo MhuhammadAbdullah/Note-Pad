@@ -39,7 +39,7 @@ body {
 .theme-switcher .theme6 { background-color: #955251; }
 
 .container {
-    width: 90%;
+    width: 70%;
     max-width: 1200px;
 }
 
@@ -117,7 +117,7 @@ body {
 
 .post-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:auto-fit minmax(repeat(2, 1fr));
     gap: 20px;
 }
 
@@ -355,6 +355,111 @@ body {
     animation-delay: 0s;
     animation-duration: 11s;
 }
+/* Modal Background */
+.edit-post-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Modal Content */
+.edit-post-modal .modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-out;
+    margin-left: 500px;
+    margin-top: 200px;
+}
+
+/* Title Style */
+.edit-post-modal h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Textarea Style */
+.edit-post-modal textarea {
+    width: 95%;
+    height: 120px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    resize: none;
+    font-size: 16px;
+    color: #333;
+    transition: border 0.3s ease-in-out;
+}
+
+.edit-post-modal textarea:focus {
+    border-color: #4CAF50; /* Green border on focus */
+    outline: none;
+}
+
+/* File Input Style */
+.edit-post-modal input[type="file"] {
+    width: 95%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+}
+
+/* Buttons Style */
+.edit-post-modal button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.edit-post-modal button:hover {
+    background-color: #45a049;
+}
+
+/* Close Button */
+.edit-post-modal .close-modal-btn {
+    background-color: #f44336; /* Red close button */
+}
+
+.edit-post-modal .close-modal-btn:hover {
+    background-color: #e53935;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
 
 @keyframes animate {
     0% {
